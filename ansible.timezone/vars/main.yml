@@ -1,0 +1,5 @@
+---
+
+# application variables
+timezone_dependent_services: [mongod]
+timezone_to_set:  'Asia/Singapore'

@@ -1,0 +1,8 @@
+---
+
+# On CentOS 7 timedatectl set-timezone does the job for one zone
+
+  - name: timezone  | set
+    sudo: yes
+    command:  timedatectl set-timezone {{ timezone_to_set }}
+    notify: restart dependent services

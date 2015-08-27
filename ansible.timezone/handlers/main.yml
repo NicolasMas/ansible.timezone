@@ -1,0 +1,7 @@
+---
+
+#handlers usually contains the service commands (start, stop, reload etc.)
+
+- name: restart dependent services
+  service: name={{ item }} state=restarted
+  with_items: timezone_dependent_services

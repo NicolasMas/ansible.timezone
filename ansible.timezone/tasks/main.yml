@@ -1,0 +1,8 @@
+---
+#
+# main entry point for the ansible playbook. We include the package.yml based on the
+# switch in the /defaults/main.yml
+#
+- include: timezone.yml
+  when: timezone_enabled
+  tags: [timezone]
